@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am Joël Weber and i come from The Netherlands, was born and raised here, and still live in the tiny country.
+Most of the stuff i will post here will be in dutch but i will also write some stuff in dutch.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[joel.weber@live.nl](mailto:joel.weber@live.nl)
