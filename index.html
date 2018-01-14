@@ -3,16 +3,30 @@ layout: default
 ---
 
 <div class="posts">
+<!-- Pinned posts -->
   {% for post in site.posts %}
-    <article class="post">
-
+    {% if post.pinned == true%}
+    <article class="pinned-post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
+      {% if post.language == NL %}<i class="svg-icon nl"></i></a>{% endif %}
+      {% if post.language == EN %}<i class="svg-icon nl"></i></a>{% endif %}
       <div class="entry">
         {{ post.excerpt }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
+  {% else %}
+  <article class="post">
+    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    {% if post.language == NL %}<i class="svg-icon nl"></i></a>{% endif %}
+    {% if post.language == EN %}<i class="svg-icon nl"></i></a>{% endif %}
+    <div class="entry">
+      {{ post.excerpt }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+  </article>
+  {% endif %}
   {% endfor %}
 </div>
