@@ -13,6 +13,7 @@ script: ./script/cibuild
 branches:
   only:
   - master #when using User Pages site
+  - dev #Also test dev branche
 #uncomment for Project Pages site
 #  - gh-pages     # test the gh-pages branch
 #  - /pages-(.*)/ # test every branch which starts with "pages-"
