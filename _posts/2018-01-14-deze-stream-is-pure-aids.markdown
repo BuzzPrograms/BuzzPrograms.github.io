@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deze stream is pure aids"
+title: "Deze streamer is erg leuk"
 date: "2018-01-14 11:19:13 +0100"
 ---
 
