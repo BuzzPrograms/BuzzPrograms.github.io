@@ -3,26 +3,27 @@ layout: default
 ---
 
 <div class="posts">
-<!-- Pinned posts -->
   {% for post in site.posts %}
     {% if post.pinned == true%}
+    <!-- Pinned posts -->
     <article class="pinned-post">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      {% if post.language == NL %}<i class="svg-icon nl"></i></a>{% endif %}
-      {% if post.language == EN %}<i class="svg-icon nl"></i></a>{% endif %}
+      {% if post.language == "NL" %}<i class="svg-icon nl"></i>{% endif %}
+      {% if post.language == "EN" %}<i class="svg-icon en"></i>{% endif %}
       <div class="entry">
-        {{ post.excerpt }}
+        {{ post.excerpt | strip_html }}
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% else %}
+  <!-- Normal posts -->
   <article class="post">
     <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-    {% if post.language == NL %}<i class="svg-icon nl"></i></a>{% endif %}
-    {% if post.language == EN %}<i class="svg-icon nl"></i></a>{% endif %}
+    {% if post.language == "NL" %}<i class="svg-icon-lang nl"></i></a>{% endif %}
+    {% if post.language == "EN" %}<i class="svg-icon-lang en"></i></a>{% endif %}
     <div class="entry">
-      {{ post.excerpt }}
+      {{ post.excerpt | strip_html }}
     </div>
 
     <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
